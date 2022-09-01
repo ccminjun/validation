@@ -40,7 +40,7 @@ public class ValidationItemControllerV3 {
         model.addAttribute("item", new Item());
         return "validation/v3/addForm";
     }
-
+// 주의깊게 보자 어떻게 동작하는지 꼼꼼히 확인해봐야 한다.
     @PostMapping("/add")
     public String addItem(@Validated @ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 
@@ -75,4 +75,5 @@ public class ValidationItemControllerV3 {
     }
 
 }
+
 
